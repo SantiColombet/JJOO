@@ -1,0 +1,54 @@
+﻿
+
+<main class="container my-5">
+    <div class="texto">
+        <h1>Juegos Olímpicos</h1>
+        <p>Descubre todo sobre los países, deportistas y deportes en los Juegos Olímpicos.</p>
+    </div>
+    <section id="presentacion" class="mb-5">
+        <h2 class="text-center mb-4">Explora las Secciones</h2>
+
+        <div class="tarjetas">
+            <!-- Tarjeta Países -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Images/paises.jpeg" class="card-img-top" alt="Países"> <!-- Reemplaza con la URL de tu imagen -->
+                    <div class="card-body">
+                        <h5 class="card-title">Países Participantes</h5>
+                        <p class="card-text">Explora los países que participan en los Juegos Olímpicos.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("Paises", "Home")" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta Deportistas -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Images/deportistas.png" class="card-img-top" alt="Deportistas"> <!-- Reemplaza con la URL de tu imagen -->
+                    <div class="card-body">
+                        <h5 class="card-title">Deportistas Destacados</h5>
+                        <p class="card-text">Conoce a los deportistas más destacados en los Juegos Olímpicos.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("Deportes", "Home")" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Agregar Deportista -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="Images/deportes.jpeg" class="card-img-top" alt="Deportes"> <!-- Reemplaza con la URL de tu imagen -->
+                    <div class="card-body">
+                        <h5 class="card-title">Deportes</h5>
+                        <p class="card-text">Mira todos los deportes que los juegos olimpicos ofercen.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("AgregarDeportista", "Home")" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>

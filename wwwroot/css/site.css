@@ -1,0 +1,155 @@
+/*                                          HEADER                                */
+.navbar {
+  background-color: white;
+  border-bottom: 2px solid #0072C6; 
+  padding: 8px 0; 
+}
+
+.container-fluid a img {
+  max-height: 40px; 
+}
+
+.navbar-nav .nav-link {
+  color: #0072C6; 
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #003E7E; 
+}
+
+.navbar-toggler {
+  border-color: #0072C6;
+} 
+
+.container-fluid div ul{
+  margin-left: 20px;
+
+}
+
+/*                                          FOOTER                                */
+
+.footer {
+  background-color: #0072C6; 
+  border-top: 2px solid #0072C6; 
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+  bottom: 0;
+  width: 100%;
+}
+.footer p {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+
+/*                                          INDEX                                */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.texto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tarjetas{
+  width: 100%;
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+
+}
+
+.tarjetas .card {
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetas .card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+.tarjetas .col-md-4 {
+  margin-bottom: 20px; 
+}
+
+.tarjetas .card {
+  margin: 10px; 
+}
+
+.card img{
+  max-height: 200px;
+}
+
+/*                                          PAISES                                */
+#paises-img{
+  object-fit: cover;
+}
+
+/*                                        CREDITOS                                        */
+.main-1 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.credito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creditos-h1 {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  width: 20%;
+}
+
+.Fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.foto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Fotos img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.Fotos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.foto-item p {
+  font-size: 1rem;
+  color: #555;
+  font-family: 'Arial, sans-serif';
+  text-align: center;
+  margin: 0;
+}

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JJOO</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/JJOO.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a href='@Url.Action("Index","Home")'>
+                        <img src="../Images/olimpiadas.png" alt="Imagen de prueba">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link"  href='@Url.Action("Deportes","Home")'>Deportes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href='@Url.Action("Paises","Home")'>Paises</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href='@Url.Action("AgregarDeportista","Home")'>Agregar deportista</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link "  href='@Url.Action("Creditos","Home")'>Creditos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow-1">
+            @RenderBody()
+        </main>
+
+
+        <footer class="footer">
+            <div class="container">
+                <p>Derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

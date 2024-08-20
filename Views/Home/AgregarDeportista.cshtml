@@ -1,0 +1,39 @@
+<form action='@Url.Action("GuardarDeportista","Home")' method="post">
+    <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" required>
+    </div>
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+    </div>
+    <div class="form-group">
+        <label for="foto">Foto:</label>
+        <input type="text" class="form-control" id="foto" name="foto" required>
+    </div>
+    <div class="form-group">
+        <label for="idPais">País:</label>
+        <select class="form-control" id="idPais" name="idPais" required>
+            <option value="">Seleccione un país</option>
+            @foreach (var pais in ViewBag.Paises)
+            {
+                <option value="@pais.IdPais">@pais.Nombre</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="idDeporte">Deporte:</label>
+        <select class="form-control" id="idDeporte" name="idDeporte" required>
+            <option value="">Seleccione un deporte</option>
+            @foreach (var deporte in ViewBag.Deportes)
+            {
+                <option value="@deporte.IdDeporte">@deporte.Nombre</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

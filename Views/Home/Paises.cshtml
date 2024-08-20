@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="texto">
+        <h1>Paises</h1>
+        <p>Estos son los paises que participan en los juegos olimpicos</p>
+    </div>
+    <div class="tarjetas row">
+        @foreach (var pais in ViewBag.Paises)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@pais.Bandera" class="card-img-top" id="paises-img">
+                    <div class="card-body">
+                        <h5 class="card-title">@pais.Nombre</h5>
+                        <h10 class="card-title">Fecha de fundacion: @pais.FechaFundacion</h10>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

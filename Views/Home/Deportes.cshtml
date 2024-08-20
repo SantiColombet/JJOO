@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="texto">
+        <h1>Deportes</h1>
+        <p>Aquí puedes ver los diferentes deportes de los Juegos Olímpicos.</p>
+    </div>
+    <div class="tarjetas row">
+        @foreach (var deporte in ViewBag.Deportes)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="@deporte.Foto" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">@deporte.Nombre</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
