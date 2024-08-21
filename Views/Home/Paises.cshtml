@@ -12,6 +12,9 @@
                     <div class="card-body">
                         <h5 class="card-title">@pais.Nombre</h5>
                         <h10 class="card-title">Fecha de fundacion: @pais.FechaFundacion</h10>
+                        <div class="card-footer text-center">
+                            <a href="@Url.Action("VerDetallePais", "Home", new { idPais = pais.IdPais })" class="btn btn-primary">Ver Más</a>
+                        </div>
                     </div>
                 </div>
             </div>

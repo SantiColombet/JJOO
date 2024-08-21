@@ -1,0 +1,26 @@
+<div>
+    <h2>Detalles del Deportista</h2>
+    <p><strong>Nombre:</strong> @Model.Nombre @Model.Apellido</p>
+    <p><strong>Fecha de Nacimiento:</strong> @Model.FechaNacimiento.ToString("dd/MM/yyyy")</p>
+    <p><strong>Foto:</strong> <img src="@Model.Foto" alt="Foto de @Model.Nombre @Model.Apellido" style="max-width:200px;"/></p>
+
+    <p><strong>Deporte:</strong> 
+        @if (Model.IdDeporte != null)
+        {
+            <a href="@Url.Action("VerDetalleDeporte", "Home", new { idDeporte = Model.IdDeporte })">
+                Ver Detalles del Deporte
+            </a>
+        }
+    </p>
+
+    <p><strong>País:</strong> 
+        @if (Model.IdPais != null)
+        {
+            <a href="@Url.Action("VerDetallePais", "Home", new { idPais = Model.IdPais })">
+                Ver Detalles del País
+            </a>
+        }
+    </p>
+
+    <a href="@Url.Action("Index", "Home")">Volver al Inicio</a>
+</div>

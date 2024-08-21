@@ -1,0 +1,25 @@
+<div>
+    <h2>Detalles del Deporte</h2>
+    <p><strong>Nombre del Deporte:</strong> @Model.Nombre</p>
+    <p><strong>Descripción:</strong> @Model.Descripcion</p>
+
+    <h3>Deportistas en este Deporte</h3>
+    <div class="row">
+        @foreach (var deportista in Model.Deportistas)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@deportista.Foto" alt="Foto de @deportista.Nombre @deportista.Apellido" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@deportista.Nombre @deportista.Apellido</h5>
+                        <p class="card-text">Fecha de Nacimiento: @deportista.FechaNacimiento.ToString("dd/MM/yyyy")</p>
+                        <a href="@Url.Action("VerDetalleDeportista", "Home", new { IdDeportista = deportista.IdDeportista })" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("VerDetalle", "Home", new { idDeporte = deportista.IdDeporte })" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

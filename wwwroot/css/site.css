@@ -51,6 +51,20 @@
 
 /*                                          INDEX                                */
 
+.banner {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: #f1f1f1; /* Color de fondo gris claro */
+}
+
+.banner img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -101,6 +115,9 @@
   object-fit: cover;
 }
 
+.card-footer {
+  background-color: white;
+}
 /*                                        CREDITOS                                        */
 .main-1 {
   width: 100%;

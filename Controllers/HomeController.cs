@@ -62,6 +62,13 @@ public class HomeController : Controller
         ViewBag.Deportista = bd.VerInfoPais(idPais);
         return View("DetallePais");
     }
+
+    public IActionResult VerDetalleDeporte(int idDeporte)
+    {
+        ViewBag.Deportistas = bd.ListarDeportistas(idDeporte);
+        ViewBag.Deporte = bd.VerInfoDeporte(idDeporte);
+        return View("DetallePais");
+    }
    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
