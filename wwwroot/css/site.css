@@ -153,3 +153,82 @@
   text-align: center;
   margin: 0;
 }
+
+/*                                        FROMULARIO                                        */.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.form-wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper .form-group {
+  margin-bottom: 15px;
+}
+
+.form-wrapper label {
+  font-weight: 600;
+  color: #0072C6;
+}
+
+.form-wrapper .form-control {
+  border: 1px solid #0072C6;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.form-wrapper .form-control:focus {
+  outline: none;
+  border-color: #003E7E;
+  box-shadow: 0 0 5px rgba(0, 114, 198, 0.5);
+}
+
+.form-wrapper .btn-primary {
+  background-color: #0072C6;
+  border-color: #0072C6;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-wrapper .btn-primary:hover {
+  background-color: #003E7E;
+  border-color: #003E7E;
+}
+
+.container {
+  padding: 2rem 1rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}

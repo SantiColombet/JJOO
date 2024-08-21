@@ -3,7 +3,7 @@ using Dapper;
 
 public class bd
 {
-    private static string _connectionString = @"Server=localhost\SQLEXPRESS; DataBase=JJOO; Trusted_Connection=True;";
+    private static string _connectionString = @"Server=127.0.0.1; DataBase=JJOO; Trusted_Connection=True;";
     public static void AgregarDeportista(Deportista _deportista)
     {
         string sql = "INSERT INTO Deportistas (Apellido, Nombre, FechaNacimiento, Foto, IdPais, IdDeporte) Values (@pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pIdPais, @pIdDeporte)";
