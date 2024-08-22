@@ -4,19 +4,21 @@
     </div>
     <div class="container">
         <div class="tarjetas row">
-            @foreach (var deportista in ViewBag.Deportistas)
-            {
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="@deportista.Foto" style="height: 200px; object-fit: cover;">
+                        <img class="card-img-top" src="@ViewBag.Deportistas.Foto" style="height: 200px; object-fit: cover;">
                             <div class="card-body">
-                                <h5 class="card-title">@deportista.Nombre @deportista.Apellido</h5>
-                                <p class="card-text">Fecha de Nacimiento: @deportista.FechaNacimiento.ToString("dd/MM/yyyy")</p>
+                                <h5 class="card-title">@ViewBag.Deportistas.Nombre @ViewBag.Deportistas.Apellido</h5>
+                                <p class="card-text">Fecha de Nacimiento: @ViewBag.Deportistas.FechaNacimiento.ToString("dd/MM/yyyy")</p>
                             </div>
-
+                        <form method="post" action='@Url.Action("VerDetallePais", "Home")' >
+                            <input type="hidden" name="idPais" value="@ViewBag.Deportistas.IdPais">
+                            <div class="card-footer text-center">
+                            <input type="submit" value="Ver Más" class="btn btn-primary"> 
+                            </div>
+                        </form>
                     </div>
                 </div>
-            }
         </div>
     </div>
 </div>

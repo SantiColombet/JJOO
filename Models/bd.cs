@@ -38,12 +38,12 @@ public class bd
             return db.QueryFirstOrDefault<Pais>(sql, new {pidPais = idPais});
         }
     } 
-    public static Pais? VerInfoDeportista (int idDeportista)
+    public static Deportista? VerInfoDeportista (int idDeportista)
     {
         string sql = "SELECT * FROM Deportistas WHERE IdDeportista = @pidDeportista";
         using (SqlConnection db = new SqlConnection(_connectionString))
         {   
-            return db.QueryFirstOrDefault<Pais>(sql, new {pidDeportista = idDeportista});
+            return db.QueryFirstOrDefault<Deportista>(sql, new {pidDeportista = idDeportista});
         }
     }   
     public static List<Pais> ListarPaises ()
