@@ -12,6 +12,12 @@
                     <div class="card-body">
                         <h5 class="card-title">@deporte.Nombre</h5>
                     </div>
+                    <form method="post" action='@Url.Action("VerDetalleDeporte", "Home")' >
+                        <input name="idDeporte" type="hidden" value="@deporte.IdDeporte">
+                        <div class="card-footer text-center">
+                        <input type="submit" value="Ver Más" class="btn btn-primary"> 
+                        </div>
+                    </form>
                 </div>
             </div>
         }

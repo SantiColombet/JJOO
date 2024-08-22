@@ -1,0 +1,32 @@
+<div>
+    <div class="texto">
+    <h1>@ViewBag.Pais.Nombre</h1>
+    <p>@ViewBag.Pais.Bandera</p>
+    </div>
+
+    <div class="texto">
+        <h3>Deportistas en este Paises</h3>
+    </div>
+    <div class="container">
+        <div class="tarjetas row">
+            @foreach (var deportista in ViewBag.Deportistas)
+            {
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="@deportista.Foto" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">@deportista.Nombre @deportista.Apellido</h5>
+                                <p class="card-text">Fecha de Nacimiento: @deportista.FechaNacimiento.ToString("dd/MM/yyyy")</p>
+                            </div>
+                        <form method="post" action='@Url.Action("VerDetalleDeportista", "Home")' >
+                            <input type="hidden" name="idDeportista" value="@deportista.IdDeportista">
+                            <div class="card-footer text-center">
+                            <input type="submit" value="Ver Más" class="btn btn-primary"> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -53,13 +53,13 @@ public class HomeController : Controller
     }
     public IActionResult VerDetalleDeportista(int IdDeportista)
     {
-        ViewBag.Deportista = bd.VerInfoPais(IdDeportista);
+        ViewBag.Deportistas = bd.VerInfoDeportista(IdDeportista);
         return View("DetalleDeportista");
     }
     public IActionResult VerDetallePais(int idPais)
     {
         ViewBag.Deportistas = bd.ListarDeportistasPais(idPais);
-        ViewBag.Deportista = bd.VerInfoPais(idPais);
+        ViewBag.Pais = bd.VerInfoPais(idPais);
         return View("DetallePais");
     }
 
@@ -67,7 +67,7 @@ public class HomeController : Controller
     {
         ViewBag.Deportistas = bd.ListarDeportistas(idDeporte);
         ViewBag.Deporte = bd.VerInfoDeporte(idDeporte);
-        return View("DetallePais");
+        return View("DetalleDeporte");
     }
    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
